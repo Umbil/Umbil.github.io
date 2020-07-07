@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <style>
+        .breadcrumb {
+            background-color: transparent;
+        }
+
+        .text-hexschool {
+            color: #00cc99 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #00cc99;">
+        <a class="navbar-brand" href="#">
+            <i class="fas fa-blog mr-2"></i>
+            UM部落格
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- container 固定的最大寬限制 -->
+        <ol class="breadcrumb pl-0">
+            <li class="breadcrumb-item"><a class="text-hexschool" href="#">Home</a></li>
+            <li class="breadcrumb-item"><a class="text-hexschool" href="#">personal</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Log</li>
+        </ol>
+        <h1 class="text-hexschool">Bootstrap 4 介紹</h1>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="my-2 text-secondary">
+                    <small>
+                        <span class="mr-3">
+                            <i class="fas fa-user-tie"></i>
+                            Umbil
+                        </span>
+                        <span class="mr-3">
+                            <i class="fas fa-table"></i>
+                            2020/07/04
+                        </span>
+                        <span>
+                            <i class="fas fa-tags"></i>
+                            Bootstrap Record
+                        </span>
+                    </small>
+                </div>
+                <article>
+                    <!-- 主要文章內容 -->
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt suscipit nostrum laborum
+                        voluptate asperiores ab, ex culpa dolorem, numquam, sapiente ratione quidem eius aut aspernatur
+                        illo totam. Nisi, tempore omnis?
+                    </p>
+                    <h2 class="text-secondary">
+                        Bootstrap 4 的特色
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus facere voluptatum amet nulla
+                        officiis vel! Mollitia consequuntur repellendus maiores itaque, ea aliquam soluta quia enim
+                        tempora quae voluptates nemo libero?
+                    </p>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quis atque, officiis
+                            debitis quisquam, molestiae aut, beatae nesciunt repellendus porro vero repellat quia
+                            aliquam sed odit qui ratione similique itaque!</li>
+                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae hic, sapiente sunt, quibusdam
+                            similique accusantium optio ullam maiores vero consequuntur, ad repellat nostrum consectetur
+                            possimus consequatur. Hic, excepturi <code>float</code> doloremque! Sit!</li>
+                    </ul>
+                    <img class="img-fluid mb-3" src="https://upload.cc/i1/2020/07/04/EpZuYm.jpg" alt="#">
+                </article>
+                <div class="card">
+                    <div class="card-header">
+                        留言回覆
+                    </div>
+                    <div class="card-body">
+                        <div class="media mb-4">
+                            <img src="https://upload.cc/i1/2020/07/04/9bZtEk.jpg" class="mr-3" alt="#" width="64" height="64">
+                            <div class="media-body">
+                                <h5 class="mt-0">Myself</h5>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="3"></textarea>
+                                    <button class="btn btn-dark btn-block mt-4">送出</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media mb-4">
+                            <img src="https://upload.cc/i1/2020/07/04/u9fWmL.jpg" class="mr-3" alt="#" width="64" height="64">
+                            <div class="media-body">
+                                <h5 class="mt-0">Woman</h5>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus doloremque quasi
+                                rerum natus consequuntur eligendi ab, labore architecto recusandae eveniet dolore
+                                consectetur quia nihil, voluptatibus, fuga itaque odio iste deleniti.
+                            </div>
+                        </div>
+                        <div class="media">
+                            <img src="https://upload.cc/i1/2020/07/04/upg60t.jpg" class="mr-3" alt="#" width="64" height="64">
+                            <div class="media-body">
+                                <h5 class="mt-0">Man</h5>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus autem voluptates ad non
+                                excepturi doloribus voluptatem fuga placeat, libero illo maiores eum quos necessitatibus
+                                dolore eveniet vero, accusantium possimus hic?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2 class="text-secondary">
+                    Tags
+                </h2>
+                <a href="#" class="badge badge-info">
+                    <i class="fas fa-tag"></i>
+                    Info
+                </a>
+                <a href="#" class="badge badge-info">
+                    <i class="fas fa-tag"></i>
+                    bootstrap
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light py-4 mt-3">
+        <div class="container d-flex justify-content-between">
+            <div class="font-weight-bold">2020 UM部落格</div>
+            <div>
+                <a href="#" class="text-hexschool pr-3"><i class="fab fa-instagram-square"></i></a>
+                <a href="#" class="text-hexschool pr-3"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-hexschool"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

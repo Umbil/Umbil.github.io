@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <style>
+        .btn {
+            border-width: 2px;
+        }
+
+        .header-carousel-item {
+            height: 450px;
+        }
+
+        .bg-cover {
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        @media (min-width: 768px) {
+            .text-md-dark {
+                color: #333;
+            }
+        }
+
+        .form-control {
+            border-width: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg-secondary py-2 ">
+        <div class="container text-right">
+            <a class="text-white mr-3" href="#">
+                <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a class="text-white" href="#">
+                <i class="fab fa-twitter fa-2x"></i>
+            </a>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                國家風景區
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">首頁 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            風景區
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">大峽谷</a>
+                            <a class="dropdown-item" href="#">樹林</a>
+                            <a class="dropdown-item" href="#">日落</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <a href="#" class="btn btn-outline-primary mr-2" data-toggle="modal" data-target="#login">登入</a>
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#register">註冊</a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item header-carousel-item bg-cover active"
+                    style="background-image: url(https://images.unsplash.com/photo-1593444470909-72b01f1ea83e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);">
+                    <div class="carousel-caption d-none d-md-block px-3">
+                        <h3>First slide label</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam eaque, corrupti ab commodi
+                            id quaerat. Laborum est sequi, architecto at quidem eos neque, itaque ratione ipsam deleniti
+                            hic numquam id.
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item header-carousel-item bg-cover"
+                    style="background-image: url(https://images.unsplash.com/photo-1593699153969-4b3a1aff4066?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
+                    <div class="carousel-caption d-none d-md-block px-3">
+                        <h3>Second slide label</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam eaque, corrupti ab commodi
+                            id quaerat. Laborum est sequi, architecto at quidem eos neque, itaque ratione ipsam deleniti
+                            hic numquam id.
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item header-carousel-item bg-cover"
+                    style="background-image: url(https://images.unsplash.com/photo-1593604539365-b115f2b756e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
+                    <div class="carousel-caption d-none d-md-block px-3">
+                        <h3>Third slide label</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam eaque, corrupti ab commodi
+                            id quaerat. Laborum est sequi, architecto at quidem eos neque, itaque ratione ipsam deleniti
+                            hic numquam id.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="bg-info py-4 text-white">
+        <div class="container my-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mb-2">
+                        <i class="fas fa-users fa-5x"></i>
+                    </div>
+                    <h3>
+                        lorem
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo sit assumenda totam, fuga
+                        quaerat commodi laborum in consequuntur nobis sint ut quasi est rem mollitia nisi tenetur minima
+                        quisquam!
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-2">
+                        <i class="fas fa-utensils fa-5x"></i>
+                    </div>
+                    <h3>
+                        lorem
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo sit assumenda totam, fuga
+                        quaerat commodi laborum in consequuntur nobis sint ut quasi est rem mollitia nisi tenetur minima
+                        quisquam!
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-2">
+                        <i class="fas fa-code-branch fa-5x"></i>
+                    </div>
+                    <h3>
+                        lorem
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo sit assumenda totam, fuga
+                        quaerat commodi laborum in consequuntur nobis sint ut quasi est rem mollitia nisi tenetur minima
+                        quisquam!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid py-4 bg-light text-white" style="position: relative;">
+        <div class="row">
+            <div class="col-md-5 bg-cover"
+                style="position: absolute; top: 0;bottom: 0;background-image: url(https://images.unsplash.com/photo-1481185103603-1dc844ef51db?dpr=2&auto=format&fit=crop&w=1080&h=718&q=80&cs=tinysrgb&crop=);">
+            </div>
+            <div class="container">
+                <div class="row justify-content-end text-md-dark">
+                    <div class="col-md-7">
+                        <h3>
+                            山上美食店
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut magnam alias tenetur. Facere
+                            quod dolore labore quidem necessitatibus fugit suscipit est! Placeat iste, consequuntur
+                            adipisci beatae perspiciatis unde minus enim.
+                        </p>
+                        <a href="#" class="btn btn-outline-info mb-3">查看更多</a>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>
+                                    Lorem
+                                </h4>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat repellendus et
+                                    maxime ad eaque reprehenderit quam soluta quod distinctio esse harum temporibus
+                                    repellat quis explicabo hic incidunt tenetur, neque quaerat.
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>
+                                    Lorem
+                                </h4>
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deleniti
+                                    veritatis nulla, consectetur architecto asperiores cupiditate aut nostrum repellat
+                                    error! Quisquam, facilis nesciunt? Fugiat modi animi temporibus nulla debitis saepe?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py5">
+        <div class="container">
+            <h2 class="text-center my-3">
+                風景的特色
+            </h2>
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <div class="mr-3 fa-3x">
+                            <i class="fab fa-canadian-maple-leaf"></i>
+                        </div>
+                        <div>
+                            <h3>Lorem</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, deleniti. Voluptates
+                                voluptate, modi quod placeat accusamus maxime blanditiis atque repellat suscipit non qui
+                                sequi neque veritatis, corporis laudantium ab dolores.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <div class="mr-3 fa-3x">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <div>
+                            <h3>Lorem</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, deleniti. Voluptates
+                                voluptate, modi quod placeat accusamus maxime blanditiis atque repellat suscipit non qui
+                                sequi neque veritatis, corporis laudantium ab dolores.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <div class="mr-3 fa-3x">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div>
+                            <h3>Lorem</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, deleniti. Voluptates
+                                voluptate, modi quod placeat accusamus maxime blanditiis atque repellat suscipit non qui
+                                sequi neque veritatis, corporis laudantium ab dolores.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <div class="mr-3 fa-3x">
+                            <i class="fab fa-pagelines"></i>
+                        </div>
+                        <div>
+                            <h3>Lorem</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, deleniti. Voluptates
+                                voluptate, modi quod placeat accusamus maxime blanditiis atque repellat suscipit non qui
+                                sequi neque veritatis, corporis laudantium ab dolores.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid py-4 bg-light text-white" style="position: relative;">
+        <div class="row">
+            <div class="col-md-5 bg-cover"
+                style="position: absolute; top: 0; bottom: 0; right: 0;
+                background-image: url(https://images.unsplash.com/photo-1593584191450-769ae1108aa7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
+            </div>
+            <div class="container">
+                <div class="row justify-content-between text-md-dark">
+                    <div class="col-md-7">
+                        <div class="mb-5">
+                            <h3 class="mb-3">
+                                享受大自然的美好
+                            </h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ut labore facere quisquam
+                                iusto
+                                voluptatum sunt repudiandae. Dolore mollitia, corporis voluptatem voluptatibus nobis
+                                error
+                                laudantium quas, asperiores maiores culpa accusamus!
+                            </p>
+                        </div>
+
+
+                        <dl class="row">
+                            <dt class="col-sm-3">Description lists</dt>
+                            <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+
+                            <dt class="col-sm-3">Euismod</dt>
+                            <dd class="col-sm-9">
+                                <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
+                                <p>Donec id elit non mi porta gravida at eget metus.</p>
+                            </dd>
+
+                            <dt class="col-sm-3">Malesuada porta</dt>
+                            <dd class="col-sm-9">Etiam porta sem malesuada magna mollis euismod.</dd>
+
+                            <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
+                            <dd class="col-sm-9">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+                                nibh, ut
+                                fermentum massa justo sit amet risus.</dd>
+
+                            <dt class="col-sm-3">Nesting</dt>
+                            <dd class="col-sm-9">
+                                <dl class="row">
+                                    <dd class="col-sm-8">Aenean posuere, tortor sed cursus feugiat, nunc augue blandit
+                                        nunc.
+                                    </dd>
+                                </dl>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d254783.5361328887!2d121.30582470227857!3d24.715794608600483!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34683da890097941%3A0xb6124c62973184ae!2z5p2x55y85bGx5ZyL5a625qOu5p6X6YGK5qiC5Y2A!5e0!3m2!1szh-TW!2stw!4v1593856034739!5m2!1szh-TW!2stw"
+                        width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <div class="col-md-6">
+                    <form action="#" class="needs-validation" novalidate>
+                        <div class="form-group">
+                            <label for="username">姓名*</label>
+                            <input type="text" class="form-control" id="username" placeholder="請輸入姓名" required>
+                            <div class="invalid-feedback">
+                                請輸入姓名
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">電話*</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="請輸入電話" required>
+                            <div class="invalid-feedback">
+                                請輸入電話
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail*</label>
+                            <input type="email" class="form-control" id="email" placeholder="請輸入E-mail" required>
+                            <div class="invalid-feedback">
+                                請輸入E-mail
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="number">人數*</label>
+                            <input type="number" class="form-control" id="number" placeholder="請輸入人數" required>
+                            <div class="invalid-feedback">
+                                請輸入人數
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                需要素食
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                value="option2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                不需要素食
+                            </label>
+                        </div>
+                        <div class="text-right">
+                            <button type="button" class="btn btn-secondary">取消</button>
+                            <button type="submit" class="btn btn-primary">送出</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 p-5 bg-cover text-white"
+                style="background-image: url(https://images.unsplash.com/photo-1484834762280-66a18a5a8f0b?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=);">
+                <div class="row">
+                    <div class="col-md-9">
+                        <small>加入我們</small>
+                        <h3>Lorem</h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, delectus qui? Laborum
+                            nemo autem,
+                            molestias voluptate doloremque numquam, in hic vel, laboriosam amet quia consequatur sunt
+                            velit
+                            similique magni ut!
+                        </p>
+                        <a href="#" class="btn btn-outline-light">加入我們</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 p-5 bg-cover text-white"
+                style="background-image: url(https://images.unsplash.com/photo-1476029764343-569b983f5785?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=);">
+                <div class="row">
+                    <div class="col-md-9">
+                        <small>加入我們</small>
+                        <h3>Lorem</h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, delectus qui? Laborum
+                            nemo autem,
+                            molestias voluptate doloremque numquam, in hic vel, laboriosam amet quia consequatur sunt
+                            velit
+                            similique magni ut!
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, delectus qui? Laborum
+                            nemo autem,
+                        </p>
+                        <a href="#" class="btn btn-outline-light">加入我們</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-light py-5">
+        <div class="container d-flex">
+            <div class="font-weight-bold">@ Copright 2020 國家風景區</div>
+            <div class="ml-4 pr-3">
+                <a href="#">
+                    <i class="fab fa-facebook-square fa-2x"></i>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+            </div>
+            <div class="ml-3">
+                <a href="#">About</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="exampleModalLabel">登入</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="form-group">
+                            <label for="email-login">E-mail</label>
+                            <input type="email" id="email-login" class="form-control" placeholder="請輸入E-mail">
+                        </div>
+                        <div class="form-group">
+                            <label for="password-login">密碼</label>
+                            <input type="password" id="password-login" class="form-control" placeholder="請輸入密碼">
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="account-number">
+                            <label class="form-check-label" for="account-number">
+                                記住帳號
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="mr-auto" data-dismiss="modal" data-toggle="modal"
+                        data-target="#register">切換到註冊</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                    <button type="button" class="btn btn-primary">送出</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-white">
+                    <h5 class="modal-title" id="exampleModalLabel">註冊</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <section class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                        <h2>註冊登山識別證</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam vero perspiciatis
+                                            magnam officia? Animi dignissimos nihil consequuntur quaerat dolore minima nobis quas
+                                            odio ratione! Debitis in mollitia voluptatum et accusantium?
+                                        </p>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam vero perspiciatis
+                                            magnam officia? Animi dignissimos nihil consequuntur quaerat dolore minima nobis quas
+                                            odio ratione! Debitis in mollitia voluptatum et accusantium?
+                                        </p>
+                                
+                            </div>
+                            <div class="col-md-6">
+                                        <form action="#">
+                                            <div class="form-group">
+                                                <label for="email-res">E-mail</label>
+                                                <input type="email" id="email-res" class="form-control" placeholder="請輸入E-mail">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="password-res">密碼</label>
+                                                <input type="password" id="password-res" class="form-control" placeholder="請輸入密碼">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="password-check">確認密碼</label>
+                                                <input type="password" id="password-check" class="form-control" placeholder="請輸入密碼">
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="accept">
+                                                <label class="form-check-label" for="accept">
+                                                    同意條款
+                                                </label>
+                                            </div>
+                                        </form>
+                            </div>
+                        </div>
+                    </section>
+                    
+
+
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#login">切換到登入</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <script>
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+    <script>
+        $(document).ready(function () {
+            console.log('ready');
+            $('a[data-dismiss="modal"][data-toggle="modal"]').on('click', function () {
+                console.log('click');
+                var target = $(this).data('target');
+                console.log('target', target);
+                $(target).on('shown.bs.modal', function () {
+                    $('body').addClass('modal-open')
+                });
+            });
+            // <a href="#" class="mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#register">切換到註冊</a>
+        })
+    </script>
+</body>
+
+</html>
